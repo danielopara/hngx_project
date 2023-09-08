@@ -19,15 +19,16 @@ app.get("/api", (req, res) => {
   ];
   const time = new Date();
   const day = time.getDay();
+  time.setMilliseconds("");
 
   const response = {
     slack_name: slackName,
     current_day: week[day],
-    utc_time: time.toISOString(),
+    utc_time: time.toISOString().slice(0, -5) + "Z",
     track: trackName,
     github_file_url:
-      " https://github.com/danielopara/hngx_project/blob/master/index.js ",
-    github_report_url: " https://github.com/danielopara/hngx_project ",
+      "https://github.com/danielopara/hngx_project/blob/master/index.js",
+    github_report_url: "https://github.com/danielopara/hngx_project",
     status_code: 200,
   };
 
