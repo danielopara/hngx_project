@@ -28,7 +28,7 @@ app.get("/api", (req, res) => {
     track: trackName,
     github_file_url:
       "https://github.com/danielopara/hngx_project/blob/master/index.js",
-    github_report_url: "https://github.com/danielopara/hngx_project",
+    github_repo_url: "https://github.com/danielopara/hngx_project",
     status_code: 200,
   };
 
