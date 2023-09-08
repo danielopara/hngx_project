@@ -5,7 +5,7 @@ const port = 9000;
 const http = require("http");
 const server = http.createServer(app);
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   const slackName = req.query.slack_name;
   const trackName = req.query.track;
   const week = [
